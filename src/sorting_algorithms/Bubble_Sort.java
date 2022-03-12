@@ -44,9 +44,11 @@ public class Bubble_Sort {
                     temp = array[j];
                     array[j] = array[j + 1];
                     array[j + 1] = temp;
+                    swapped = true;
                 }
             }
 
+            //Already Sorted:
             if(swapped == false){
                 break;
             }
