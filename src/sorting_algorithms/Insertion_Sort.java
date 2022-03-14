@@ -14,7 +14,7 @@ public class Insertion_Sort {
     private static int[] sort(int[] array, int length) {
 
         //Rounds:
-        for(int i = 1 ; i < length ; i++){
+        for(int i = 2 ; i < length ; i++){
             //Current - Element:
             int currentElement = array[i];
             //Previous Sub Array:(i - 1 To 0)
