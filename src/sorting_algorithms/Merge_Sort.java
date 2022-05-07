@@ -24,33 +24,33 @@ public class Merge_Sort {
 
     private static void conquer(int[] array, int startIndex, int middleIndex, int endIndex) {
         int[] mergedArray = new int[endIndex - startIndex + 1];
-        int index1 = startIndex;
-        int index2 = middleIndex + 1;
-        int index3 = 0;
+        int startIndexOfFirstArray = startIndex;
+        int startIndexOfRightArray = middleIndex + 1;
+        int startIndexOfMergedArray = 0;
 
-        while(index1 <= middleIndex && index2 <= endIndex){
-            if(array[index1] <= array[index2]){
-                mergedArray[index3] = array[index1];
-                index1++;
-                index3++;
+        while(startIndexOfFirstArray <= middleIndex && startIndexOfRightArray <= endIndex){
+            if(array[startIndexOfFirstArray] <= array[startIndexOfRightArray]){
+                mergedArray[startIndexOfMergedArray] = array[startIndexOfFirstArray];
+                startIndexOfFirstArray++;
+                startIndexOfMergedArray++;
             }
             else{
-                mergedArray[index3] = array[index2];
-                index2++;
-                index3++;
+                mergedArray[startIndexOfMergedArray] = array[startIndexOfRightArray];
+                startIndexOfRightArray++;
+                startIndexOfMergedArray++;
             }
         }
 
-        while(index1 <= middleIndex){
-            mergedArray[index3] = array[index1];
-            index1++;
-            index3++;
+        while(startIndexOfFirstArray <= middleIndex){
+            mergedArray[startIndexOfMergedArray] = array[startIndexOfFirstArray];
+            startIndexOfFirstArray++;
+            startIndexOfMergedArray++;
         }
 
-        while(index2 <= endIndex){
-            mergedArray[index3] = array[index2];
-            index2++;
-            index3++;
+        while(startIndexOfRightArray <= endIndex){
+            mergedArray[startIndexOfMergedArray] = array[startIndexOfRightArray];
+            startIndexOfRightArray++;
+            startIndexOfMergedArray++;
         }
 
         for(int i = 0, j = startIndex ; i < mergedArray.length ; i++, j++){
