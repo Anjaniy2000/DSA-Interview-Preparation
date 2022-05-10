@@ -39,6 +39,18 @@ public class SortedSquaredArray {
 
     }
 
+    //BruteForce-Approach:
+    private static int[] bruteForceApproach(int[] array, int size) {
+        int[] result = new int[size];
+
+        for(int i = 0 ; i < size ; i++){
+            result[i] = (array[i] * array[i]);
+        }
+
+        Arrays.sort(result);
+        return result;
+    }
+
     //Two-Pointers-Approach:
     private static int[] twoPointersApproach(int[] array, int size) {
 
@@ -58,17 +70,5 @@ public class SortedSquaredArray {
         }
         return result;
 
-    }
-
-    //BruteForce-Approach:
-    private static int[] bruteForceApproach(int[] array, int size) {
-        int[] result = new int[size];
-
-        for(int i = 0 ; i < size ; i++){
-            result[i] = (array[i] * array[i]);
-        }
-
-        Arrays.sort(result);
-        return result;
     }
 }

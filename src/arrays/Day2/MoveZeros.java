@@ -43,8 +43,25 @@ public class MoveZeros {
             System.out.print(i + " ");
         }
 
+    }
 
+    //BruteForce-Approach(1st[If Order Doesn't Matters]):
+    private static Integer[] bruteForceApproachOne(Integer[] array, int size) {
+        Arrays.sort(array, Collections.reverseOrder());
+        return array;
+    }
 
+    //BruteForce-Approach(2nd[If Order Matters]):
+    private static int[] bruteForceApproachSecond(int[] array, int size) {
+        int[] tempArray = new int[size];
+        int tempIndex = 0;
+        for(int i = 0 ; i < size ; i++){
+            if(array[i] != 0){
+                tempArray[tempIndex] = array[i];
+                tempIndex++;
+            }
+        }
+        return tempArray;
     }
 
     //Two-Pointers-Approach:
@@ -67,26 +84,4 @@ public class MoveZeros {
         return array;
 
     }
-
-
-    //BruteForce-Approach(1st[If Order Doesn't Matters]):
-    private static Integer[] bruteForceApproachOne(Integer[] array, int size) {
-        Arrays.sort(array, Collections.reverseOrder());
-        return array;
-    }
-
-    //BruteForce-Approach(2nd[If Order Matters]):
-    private static int[] bruteForceApproachSecond(int[] array, int size) {
-        int[] tempArray = new int[size];
-        int tempIndex = 0;
-        for(int i = 0 ; i < size ; i++){
-            if(array[i] != 0){
-                tempArray[tempIndex] = array[i];
-                tempIndex++;
-            }
-        }
-        return tempArray;
-    }
-
-
 }
