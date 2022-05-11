@@ -64,9 +64,9 @@ public class ChocolateDistribution {
         Arrays.sort(chocolate_packets);
 
         int difference = Integer.MAX_VALUE;
-
-        for(int i = 0 ; i < size - students ; i++){
-                //MAX                                //MIN
+                        //If Arrays Has Only 1 Element?
+        for(int i = 0 ; i <= size - students ; i++){
+                //MAX-ELEMENT                         //MIN-ELEMENT
             if(chocolate_packets[i + students - 1] - chocolate_packets[i] < difference ){
                 //DIFFERENCE
                 difference = chocolate_packets[i + students - 1] - chocolate_packets[i];
