@@ -53,12 +53,13 @@ public class ChocolateDistribution {
 
         int students = scanner.nextInt();
 
-        int minimum_difference = solution(chocolate_packets, size, students);
+        int minimum_difference = slidingWindowApproach(chocolate_packets, size, students);
         System.out.print("Minimum Difference = " + minimum_difference);
+
     }
 
     //Sliding-Window-Approach:
-    private static int solution(int[] chocolate_packets, int size, int students) {
+    private static int slidingWindowApproach(int[] chocolate_packets, int size, int students) {
 
         Arrays.sort(chocolate_packets);
 
