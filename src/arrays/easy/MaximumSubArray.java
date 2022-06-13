@@ -1,4 +1,4 @@
-package arrays.Day1;
+package arrays.easy;
 
 /*
 Given an integer array, find the contiguous sub-array (containing at least one number) which has the largest sum and return its sum.
